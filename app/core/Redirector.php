@@ -29,7 +29,7 @@ class Redirector{
             $query = '?' . http_build_query((array)$query, null, '&');
         }
 
-        $response = new Response('', 302, ["Location" => $location. $query]);
+        $response = new Response('', 302, ["Location" => $location . $query]);
         return $response;
     }
 
@@ -46,8 +46,7 @@ class Redirector{
      * Redirect to the dashboard
      */
     public function dashboard(){
-        //return $this->to(PUBLIC_ROOT ."public/". "User");
-        return $this->to(PUBLIC_ROOT ."User");
+        return $this->to(PUBLIC_ROOT . "User");
     }
 
     /**

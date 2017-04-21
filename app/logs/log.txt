@@ -1,8 +1,0 @@
-21/04/2017 4:42:58 | C:\Users\User\PhpstormProjects\cmm503-cw-1017166-Aluya\app\core\Request.php | 216 | Error
-Class 'Enviroment' not found
-*******************************************************************
-
-21/04/2017 4:48:51 | C:\Users\User\PhpstormProjects\cmm503-cw-1017166-Aluya\app\core\Request.php | 216 | Error
-Class 'Enviroment' not found
-*******************************************************************
-
