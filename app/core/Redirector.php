@@ -46,7 +46,8 @@ class Redirector{
      * Redirect to the dashboard
      */
     public function dashboard(){
-        return $this->to(PUBLIC_ROOT ."public/". "User");
+        //return $this->to(PUBLIC_ROOT ."public/". "User");
+        return $this->to(PUBLIC_ROOT ."User");
     }
 
     /**
