@@ -7,6 +7,6 @@
  */
 
 print __DIR__." floor path in server \n\r";
-
+print PUBLIC_ROOT ." this is pub root";
 
 ?>
