@@ -37,7 +37,7 @@ class FilesController extends Controller {
 
         $pageNum  = $this->request->query("page");
 
-        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout{DIRECTORY_SEPARATOR}default{DIRECTORY_SEPARATOR}", Config::get('VIEWS_PATH') . 'files/index.php', ['pageNum' => $pageNum]);
+        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout".DIRECTORY_SEPARATOR."default".DIRECTORY_SEPARATOR."", Config::get('VIEWS_PATH') . 'files/index.php', ['pageNum' => $pageNum]);
     }
 
     public function create(){
@@ -50,7 +50,7 @@ class FilesController extends Controller {
             $this->view->renderErrors($this->file->errors());
         }else{
 
-            $fileHTML = $this->view->render(Config::get('VIEWS_PATH') . 'files/files.php', array("files" => $file));
+            $fileHTML = $this->view->render(Config::get('VIEWS_PATH') . 'files' . DIRECTORY_SEPARATOR . 'files.php', array("files" => $file));
             $this->view->renderJson(array("data" => $fileHTML));
         }
     }

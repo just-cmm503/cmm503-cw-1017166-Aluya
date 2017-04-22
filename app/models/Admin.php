@@ -183,7 +183,7 @@ class Admin extends User{
       */
      public function getBackups() {
 
-         $files = scandir(APP . "backups/");
+         $files = scandir(APP . "backups". DIRECTORY_SEPARATOR);
          $basename = $filename = $unixTimestamp = null;
 
          foreach ($files as $file) {

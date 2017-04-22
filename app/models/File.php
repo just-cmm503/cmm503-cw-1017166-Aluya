@@ -118,7 +118,7 @@ class File extends Model{
 
         // if insert failed, then delete the file
         if($database->countRows() !== 1){
-            Uploader::deleteFile(APP ."uploads/" . $file["basename"]);
+            Uploader::deleteFile(APP ."uploads". DIRECTORY_SEPARATOR . $file["basename"]);
             throw new Exception ("Couldn't upload file");
         }
 
@@ -153,7 +153,7 @@ class File extends Model{
         }
 
         $basename = $file["hashed_filename"] . "." . $file["extension"];
-        Uploader::deleteFile(APP ."uploads/" . $basename);
+        Uploader::deleteFile(APP ."uploads". DIRECTORY_SEPARATOR . $basename);
 
         $database->commit();
      }

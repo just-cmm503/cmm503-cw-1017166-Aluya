@@ -75,7 +75,7 @@ class Uploader{
      *
      */
     public static function uploadFile($file, $id = null){
-        return self::upload($file, APP . "uploads/" , $id);
+        return self::upload($file, APP . "uploads" . DIRECTORY_SEPARATOR , $id);
     }
 
     /**
@@ -86,7 +86,7 @@ class Uploader{
      *
      */
     public static function uploadCSV($file){
-        return self::upload($file, APP . "uploads/", null, "csv");
+        return self::upload($file, APP . "uploads" . DIRECTORY_SEPARATOR, null, "csv");
     }
 
     /**

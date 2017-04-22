@@ -238,7 +238,7 @@ class LoginController extends Controller {
         if(!$result){
 
             Session::set('update-password-errors', $this->login->errors());
-            return $this->redirector->to(PUBLIC_ROOT . "Login/resetPassword", ['id' => $this->request->data("id"), 'token' => $this->request->data("token")]);
+            return $this->redirector->to(PUBLIC_ROOT . "Login". DIRECTORY_SEPARATOR ."resetPassword", ['id' => $this->request->data("id"), 'token' => $this->request->data("token")]);
 
         } else {
 

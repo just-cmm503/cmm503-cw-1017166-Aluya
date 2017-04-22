@@ -133,7 +133,7 @@ class LoginController extends Controller {
         if(!$result){
             return $this->error(404);
         }else{
-            $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/login/", Config::get('LOGIN_PATH') . 'userVerified.php');
+            $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout" . DIRECTORY_SEPARATOR . "login" . DIRECTORY_SEPARATOR, Config::get('LOGIN_PATH') . 'userVerified.php');
         }
     }
 
@@ -219,7 +219,7 @@ class LoginController extends Controller {
             // so you will ending up using updatePassword() on an invalid user id.
             Session::set("user_id_reset_password", $userId);
 
-            $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/login/", Config::get('LOGIN_PATH') . 'updatePassword.php');
+            $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout" . DIRECTORY_SEPARATOR . "login" . DIRECTORY_SEPARATOR, Config::get('LOGIN_PATH') . 'updatePassword.php');
         }
     }
 
@@ -238,14 +238,14 @@ class LoginController extends Controller {
         if(!$result){
 
             Session::set('update-password-errors', $this->login->errors());
-            return $this->redirector->to(PUBLIC_ROOT . "Login/resetPassword", ['id' => $this->request->data("id"), 'token' => $this->request->data("token")]);
+            return $this->redirector->to(PUBLIC_ROOT . "Login" . DIRECTORY_SEPARATOR . "resetPassword", ['id' => $this->request->data("id"), 'token' => $this->request->data("token")]);
 
         } else {
 
             // logout, and clear any existing session and cookies
             $this->login->logOut(Session::getUserId());
 
-            $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/login/", Config::get('LOGIN_PATH') . 'passwordUpdated.php');
+            $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout" . DIRECTORY_SEPARATOR . "login" . DIRECTORY_SEPARATOR, Config::get('LOGIN_PATH') . 'passwordUpdated.php');
         }
     }
 

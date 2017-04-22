@@ -183,7 +183,7 @@ class Admin extends User{
       */
      public function getBackups() {
 
-         $files = scandir(APP . "backups/");
+         $files = scandir(APP . "backups".DIRECTORY_SEPARATOR);
          $basename = $filename = $unixTimestamp = null;
 
          foreach ($files as $file) {
@@ -214,7 +214,7 @@ class Admin extends User{
      */
     public function updateBackup(){
 
-         $dir = APP . "backups/";
+         $dir = APP . "backups".DIRECTORY_SEPARATOR;
          $files = scandir($dir);
 
          // delete and clean all current files in backup directory

@@ -78,7 +78,7 @@ class Config{
 
         if (!isset(self::$config[$source])) {
 
-            $config_file = APP . 'config/' . $source . '.php';
+            $config_file = APP . 'config'. DIRECTORY_SEPARATOR . $source . '.php';
 
             if (!file_exists($config_file)) {
                 throw new Exception("Configuration file " . $source . " doesn't exist");
