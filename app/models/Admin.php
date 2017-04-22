@@ -214,7 +214,7 @@ class Admin extends User{
      */
     public function updateBackup(){
 
-         $dir = APP . "backups/";
+         $dir = APP . "backups".DIRECTORY_SEPARATOR;
          $files = scandir($dir);
 
          // delete and clean all current files in backup directory
@@ -229,7 +229,7 @@ class Admin extends User{
          // you can use another username and password only for this function, while the main user has limited privileges
          $windows = true;
          if($windows){
-             exec('C:\wamp\bin\mysql\mysql5.6.17\bin\mysqldump --user=' . escapeshellcmd(Config::get('DB_USER')) . ' --password=' . escapeshellcmd(Config::get('DB_PASS')) . ' ' . escapeshellcmd(Config::get('DB_NAME')) . ' > '. APP.'backups\backup-' . time() . '.sql');
+             exec('mysqldump --user=' . escapeshellcmd(Config::get('DB_USER')) . ' --password=' . escapeshellcmd(Config::get('DB_PASS')) . ' ' . escapeshellcmd(Config::get('DB_NAME')) . ' > '. APP.'backups\backup-' . time() . '.sql');
          }else{
              exec('mysqldump --user=' . escapeshellcmd(Config::get('DB_USER')) . ' --password=' .escapeshellcmd(Config::get('DB_PASS')). ' '. escapeshellcmd(Config::get('DB_NAME')) .' > '. APP . 'backups/backup-' . time() . '.sql');
          }
