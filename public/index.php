@@ -10,7 +10,8 @@
 |
 */
 
-require  '../vendor/autoload.php';
+//require  '../vendor/autoload.php';
+print "yu are in ".__DIR__." \n\r";
 
 /*
 |--------------------------------------------------------------------------
