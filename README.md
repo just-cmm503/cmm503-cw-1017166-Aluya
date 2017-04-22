@@ -368,7 +368,7 @@ Inside the action method you can make a call to model to get some data, and/or r
   public function index(){
  
 	// render full page with layout(header and footer)
-	$this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout".DIRECTORY_SEPARATOR."default".DIRECTORY_SEPARATOR."", Config::get('VIEWS_PATH') . 'notes/index.php');
+	$this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/default/", Config::get('VIEWS_PATH') . 'notes/index.php');
 	
 	// render page without layout
 	$this->view->render(Config::get('VIEWS_PATH') . 'notes/note.php');
@@ -541,7 +541,7 @@ In order to send request and recieve a respond, you may depend on Ajax calls to 
 
 #### In _public/main.js_
 
-**config** object is assigned to key-value pairs in [footer.php](https://github.com/OmarElGabry/miniPHP/blob/master/app/views/layout".DIRECTORY_SEPARATOR."default".DIRECTORY_SEPARATOR."footer.php). These key-value pairs can be added in server-side code using ```Config::setJsConfig('key', "value");```, which will be assigned then to _config_ object.
+**config** object is assigned to key-value pairs in [footer.php](https://github.com/OmarElGabry/miniPHP/blob/master/app/views/layout/default/footer.php). These key-value pairs can be added in server-side code using ```Config::setJsConfig('key', "value");```, which will be assigned then to _config_ object.
 
 **ajax** A namespace that has two main functions for sending ajax request. One for normal ajax calls, and another for for uploading files.
 

@@ -1,6 +1,5 @@
 <?php
 
-//D:\home\site\wwwroot floor path in server
 /*
 |--------------------------------------------------------------------------
 | Autoload
@@ -9,9 +8,9 @@
 | After running "composer install", we can use the autoloader file created.
 |
 */
-
+print DIRECTORY_SEPARATOR." aaag ".DIRECTORY_SEPARATOR." oooop{DIRECTORY_SEPARATOR}  ";
 require  '../vendor/autoload.php';
-//print "yu are in ".__DIR__." \n\r";
+
 /*
 |--------------------------------------------------------------------------
 | Define Application Configuration Constants
