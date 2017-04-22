@@ -21,7 +21,7 @@ return array(
      */
     "DB_HOST" =>"localhost:52543",
     "DB_NAME" => "miniphp_68dozftn",
-    "DB_USER" => "root",
+    "DB_USER" => "azure",
     "DB_PASS" => "6#vWHD_$",
     'DB_CHARSET' => 'utf8',
 
