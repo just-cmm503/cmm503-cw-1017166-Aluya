@@ -52,7 +52,7 @@ class AdminController extends Controller {
     public function users(){
 
         Config::setJsConfig('curPage', "users");
-        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/default/", Config::get('ADMIN_VIEWS_PATH') . 'users/index.php');
+        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout{DIRECTORY_SEPARATOR}default{DIRECTORY_SEPARATOR}", Config::get('ADMIN_VIEWS_PATH') . 'users{DIRECTORY_SEPARATOR}index.php');
     }
 
     /**
@@ -94,7 +94,7 @@ class AdminController extends Controller {
         Config::setJsConfig('curPage', "users");
         Config::setJsConfig('userId', Encryption::encryptId($userId));
 
-        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/default/", Config::get('ADMIN_VIEWS_PATH') . 'users/viewUser.php', array("userId" => $userId));
+        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout{DIRECTORY_SEPARATOR}default{DIRECTORY_SEPARATOR}", Config::get('ADMIN_VIEWS_PATH') . 'users/viewUser.php', array("userId" => $userId));
     }
 
     /**
@@ -144,7 +144,7 @@ class AdminController extends Controller {
     public function backups(){
 
         Config::setJsConfig('curPage', "backups");
-        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/default/", Config::get('ADMIN_VIEWS_PATH') . 'backups.php');
+        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout{DIRECTORY_SEPARATOR}default{DIRECTORY_SEPARATOR}", Config::get('ADMIN_VIEWS_PATH') . 'backups.php');
     }
 
     /**

@@ -37,13 +37,13 @@ class UserController extends Controller{
     public function index(){
 
         Config::setJsConfig('curPage', "dashboard");
-        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/default/", Config::get('VIEWS_PATH') . 'dashboard/index.php');
+        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout{DIRECTORY_SEPARATOR}default{DIRECTORY_SEPARATOR}", Config::get('VIEWS_PATH') . 'dashboard/index.php');
     }
 
     public function profile(){
 
         Config::setJsConfig('curPage', "profile");
-        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/default/", Config::get('VIEWS_PATH') . 'user/profile.php');
+        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout{DIRECTORY_SEPARATOR}default{DIRECTORY_SEPARATOR}", Config::get('VIEWS_PATH') . 'user/profile.php');
     }
 
     public function updateProfileInfo(){
@@ -98,7 +98,7 @@ class UserController extends Controller{
         if(!$result){
             return $this->error(404);
         }else{
-            $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/default/", Config::get('VIEWS_PATH') . 'user/profile.php', ["emailUpdates" => ["success" => "Your email updates has been revoked successfully."]]);
+            $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout{DIRECTORY_SEPARATOR}default{DIRECTORY_SEPARATOR}", Config::get('VIEWS_PATH') . 'user/profile.php', ["emailUpdates" => ["success" => "Your email updates has been revoked successfully."]]);
         }
     }
 
@@ -119,9 +119,9 @@ class UserController extends Controller{
         if(!$result && empty($errors)){
             return $this->error(404);
         }else if(!$result && !empty($errors)){
-            $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/default/", Config::get('VIEWS_PATH') . 'user/profile.php', ["emailUpdates" => ["errors" => $this->user->errors()]]);
+            $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout{DIRECTORY_SEPARATOR}default{DIRECTORY_SEPARATOR}", Config::get('VIEWS_PATH') . 'user/profile.php', ["emailUpdates" => ["errors" => $this->user->errors()]]);
         }else{
-            $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/default/", Config::get('VIEWS_PATH') . 'user/profile.php',
+            $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout{DIRECTORY_SEPARATOR}default{DIRECTORY_SEPARATOR}", Config::get('VIEWS_PATH') . 'user/profile.php',
                 ["emailUpdates" => ["success" => "Your email updates has been updated successfully."]]);
         }
     }
@@ -135,7 +135,7 @@ class UserController extends Controller{
      */
     public function bugs(){
         Config::setJsConfig('curPage', "bugs");
-        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/default/", Config::get('VIEWS_PATH') . 'bugs/index.php');
+        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout{DIRECTORY_SEPARATOR}default{DIRECTORY_SEPARATOR}", Config::get('VIEWS_PATH') . 'bugs/index.php');
     }
 
     /**

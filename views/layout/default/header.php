@@ -34,4 +34,4 @@
 <body>
 
     <div id="wrapper">
-		<?php require_once(Config::get('VIEWS_PATH') . "layout/default/navigation.php");?>
+		<?php require_once(Config::get('VIEWS_PATH') . "layout{DIRECTORY_SEPARATOR}default{DIRECTORY_SEPARATOR}navigation.php");?>
