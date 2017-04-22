@@ -10,8 +10,8 @@
 |
 */
 
-//require  '../vendor/autoload.php';
-print "yu are in ".__DIR__." \n\r";
+require  '../vendor/autoload.php';
+//print "yu are in ".__DIR__." \n\r";
 /*
 |--------------------------------------------------------------------------
 | Define Application Configuration Constants
