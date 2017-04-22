@@ -144,5 +144,4 @@ return array(
      *
      */
     "PAGINATION_DEFAULT_LIMIT" => 10
-
 );
