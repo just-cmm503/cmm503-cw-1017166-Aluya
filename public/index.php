@@ -8,7 +8,7 @@
 | After running "composer install", we can use the autoloader file created.
 |
 */
-print DIRECTORY_SEPARATOR." aaag ".DIRECTORY_SEPARATOR." oooop{DIRECTORY_SEPARATOR}  ";
+
 require  '../vendor/autoload.php';
 
 /*

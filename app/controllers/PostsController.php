@@ -45,7 +45,7 @@ class PostsController extends Controller{
 
         $pageNum  = $this->request->query("page");
 
-        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout".DIRECTORY_SEPARATOR."default".DIRECTORY_SEPARATOR."", Config::get('VIEWS_PATH') . 'posts/index.php', ['pageNum' => $pageNum]);
+        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/default/", Config::get('VIEWS_PATH') . 'posts/index.php', ['pageNum' => $pageNum]);
     }
 
     /**
@@ -65,14 +65,14 @@ class PostsController extends Controller{
         Config::setJsConfig('postId', Encryption::encryptId($postId));
 
         $action  = $this->request->query('action');
-        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout".DIRECTORY_SEPARATOR."default".DIRECTORY_SEPARATOR."", Config::get('VIEWS_PATH') . 'posts/viewPost.php', ["action"=> $action, "postId" => $postId]);
+        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/default/", Config::get('VIEWS_PATH') . 'posts/viewPost.php', ["action"=> $action, "postId" => $postId]);
     }
 
     /**
      * show new post form
      */
     public function newPost(){
-        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout".DIRECTORY_SEPARATOR."default".DIRECTORY_SEPARATOR."", Config::get('VIEWS_PATH') . 'posts/newPost.php');
+        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/default/", Config::get('VIEWS_PATH') . 'posts/newPost.php');
     }
 
     /**
@@ -92,7 +92,7 @@ class PostsController extends Controller{
             Session::set('posts-success', "Post has been created");
         }
 
-        return $this->redirector->root("Posts". DIRECTORY_SEPARATOR ."newPost");
+        return $this->redirector->root("Posts/newPost");
     }
 
     /**

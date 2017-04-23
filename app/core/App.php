@@ -145,7 +145,7 @@ class App {
         if(!empty($controller)){
             if (!preg_match('/\A[a-z]+\z/i', $controller) ||
                 strtolower($controller) === "errorscontroller" ||
-                !file_exists(APP . 'controllers'. DIRECTORY_SEPARATOR . $controller . '.php')){
+                !file_exists(APP . 'controllers/' . $controller . '.php')){
                 return false;
             }else { return true; }
 

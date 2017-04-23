@@ -22,22 +22,22 @@ class ErrorsController extends Controller{
     }
 
     public function NotFound(){
-        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout" . DIRECTORY_SEPARATOR . "errors" . DIRECTORY_SEPARATOR, Config::get('ERRORS_PATH') . "404.php");
+        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/errors/", Config::get('ERRORS_PATH') . "404.php");
     }
 
     public function Unauthenticated(){
-        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout" . DIRECTORY_SEPARATOR . "errors" . DIRECTORY_SEPARATOR, Config::get('ERRORS_PATH') . "401.php");
+        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/errors/", Config::get('ERRORS_PATH') . "401.php");
     }
 
     public function Unauthorized(){
-        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout" . DIRECTORY_SEPARATOR . "errors" . DIRECTORY_SEPARATOR, Config::get('ERRORS_PATH') . "403.php");
+        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/errors/", Config::get('ERRORS_PATH') . "403.php");
     }
 
     public function BadRequest(){
-        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout" . DIRECTORY_SEPARATOR . "errors" . DIRECTORY_SEPARATOR, Config::get('ERRORS_PATH') . "400.php");
+        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/errors/", Config::get('ERRORS_PATH') . "400.php");
     }
 
     public function System(){
-        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout" . DIRECTORY_SEPARATOR . "errors" . DIRECTORY_SEPARATOR, Config::get('ERRORS_PATH') . "500.php");
+        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/errors/", Config::get('ERRORS_PATH') . "500.php");
     }
 }

@@ -29,7 +29,7 @@ class DownloadsController extends Controller {
      */
     public function download($hashedFileName = ''){
 
-        $fullPath = APP . "uploads". DIRECTORY_SEPARATOR ;
+        $fullPath = APP . "uploads/" ;
         $file = $this->file->getByHashedName($hashedFileName);
 
         if(empty($file)){

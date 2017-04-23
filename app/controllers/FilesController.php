@@ -37,7 +37,7 @@ class FilesController extends Controller {
 
         $pageNum  = $this->request->query("page");
 
-        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout".DIRECTORY_SEPARATOR."default".DIRECTORY_SEPARATOR."", Config::get('VIEWS_PATH') . 'files/index.php', ['pageNum' => $pageNum]);
+        $this->view->renderWithLayouts(Config::get('VIEWS_PATH') . "layout/default/", Config::get('VIEWS_PATH') . 'files/index.php', ['pageNum' => $pageNum]);
     }
 
     public function create(){
