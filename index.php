@@ -27,9 +27,9 @@ require 'vendor/autoload.php';
 // Config::set('images', str_replace("\\", "/", __DIR__) . "/img/");
 // Config::set('app', Config::get('base') . "/app/");
 
-define('BASE_DIR', str_replace("\\", "/", dirname(__DIR__)));
-define('IMAGES',   str_replace("\\", "/", __DIR__) . "/img/");
-define('APP',  BASE_DIR . "/app/");
+define('BASE_DIR', str_replace("\\", "/", __DIR__)."/");
+define('IMAGES',   str_replace("\\", "/", __DIR__) . "/public/img/");
+define('APP',  BASE_DIR . "app/");
 
 /*
 |--------------------------------------------------------------------------
