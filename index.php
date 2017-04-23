@@ -65,7 +65,7 @@ Session::init();
 $app = new App();
 
 // Config::set('root', $app->request->root());
-define('PUBLIC_ROOT', $app->request->root());
+define('PUBLIC_ROOT', $app->request->root())."/";
 
 /*
 |--------------------------------------------------------------------------
