@@ -346,7 +346,7 @@ class Request{
      * @return string
      */
     public function getBaseUrl(){
-        $baseUrl = dirname(Environment::get('SCRIPT_NAME'));
+        $baseUrl = str_replace(['public', '\\'], ['', '/'], dirname(Environment::get('SCRIPT_NAME')));
         return $baseUrl;
     }
 
